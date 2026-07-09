@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from '../ui/button'
+import { buttonVariants } from '../ui/button'
 import DashboardSideBar from './DashboardSideBar'
 import RegisterButton from '@/auth/RegisterButton'
 import LoginButton from '@/auth/LoginButton'
@@ -11,6 +11,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
+import { Link } from 'react-router-dom'
 
 const PublicNavbar = () => {
   return (
@@ -49,12 +50,16 @@ const PublicNavbar = () => {
     </NavigationMenuItem>
   </NavigationMenuList>
 </NavigationMenu>
-        <Button variant="ghost">Pricing</Button>
+        <Link to="/users" className={buttonVariants({ variant: "ghost" })}>
+          Users
+        </Link>
       </nav>
       </div>
       <div className="hidden items-center gap-4 sm:flex">
         <LoginButton/>
         <RegisterButton/>
+      </div>
+      <div>
       </div>
       <DashboardSideBar/>
     </header>

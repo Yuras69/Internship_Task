@@ -1,15 +1,14 @@
-import { Button } from '@/components/ui/button'
+import { buttonVariants } from '@/components/ui/button'
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Register = () => {
-const navigate = useNavigate()
   return (
     <div>
       <div className="flex  items-center justify-end gap-4">
-        <Button variant="default" onClick={() => navigate('/register')}>
+        <Link to="/register" className={buttonVariants({ variant: "default" })}>
           Register
-        </Button>
+        </Link>
       </div>
     </div>
   )
