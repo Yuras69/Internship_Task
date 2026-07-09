@@ -5,6 +5,10 @@ import Home from './Pages/Home'
 import PublicLayout from './Layouts/PublicLayout'
 import About from './Pages/About'
 import Event from './Pages/Event'
+import Login from './Pages/Login'
+import Register from './Pages/Register'
+import Users from './Pages/Users'
+import UserDetails from './Pages/UserDetails'
 
 export function App() {
 
@@ -24,10 +28,35 @@ const router = createBrowserRouter([
     {
       path: '/event',
       Component: Event,
-    }
+    },
+    {
+      path: '/users',
+      children: [
+        {
+          index: true,
+          Component: Users,
+        },
+        {
+          path: ':id',
+          Component: UserDetails,
+        },
+      ]
+    },
+
   ]
-  }
+  },
+  {
+    path: '/login',
+    Component: Login
+  },
+
+  {
+    path: '/register',
+    Component: Register
+  },
+
 ])
+
 
 return <RouterProvider router={router} />
 
