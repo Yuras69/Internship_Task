@@ -8,6 +8,7 @@ import Event from './Pages/Event'
 import Login from './Pages/Login'
 import Register from './Pages/Register'
 import Users from './Pages/Users'
+import UserDetails from './Pages/UserDetails'
 
 export function App() {
 
@@ -30,17 +31,17 @@ const router = createBrowserRouter([
     },
     {
       path: '/users',
-      Component: Users
-
-    },
-    {
       children: [
         {
-          path: '/users/:id',
+          index: true,
           Component: Users,
-        }
+        },
+        {
+          path: ':id',
+          Component: UserDetails,
+        },
       ]
-    }
+    },
 
   ]
   },
