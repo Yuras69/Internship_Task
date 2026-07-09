@@ -9,6 +9,7 @@ import Login from './Pages/Login'
 import Register from './Pages/Register'
 import Users from './Pages/Users'
 import UserDetails from './Pages/UserDetails'
+import Product from './Pages/Product'
 
 export function App() {
 
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
     {
       path: '/event',
       Component: Event,
+    },
+    {
+      path: '/product',
+      Component: Product,
     },
     {
       path: '/users',
