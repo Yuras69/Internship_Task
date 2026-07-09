@@ -5,6 +5,8 @@ import Home from './Pages/Home'
 import PublicLayout from './Layouts/PublicLayout'
 import About from './Pages/About'
 import Event from './Pages/Event'
+import Login from './Pages/Login'
+import Register from './Pages/Register'
 
 export function App() {
 
@@ -26,8 +28,18 @@ const router = createBrowserRouter([
       Component: Event,
     }
   ]
+  },
+  {
+    path: '/login',
+    Component: Login
+  },
+
+  {
+    path: '/register',
+    Component: Register
   }
 ])
+
 
 return <RouterProvider router={router} />
 

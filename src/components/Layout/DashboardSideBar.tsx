@@ -1,4 +1,5 @@
 
+import { Button } from '../ui/button'
 import {
   Sheet,
   SheetContent,
@@ -23,6 +24,13 @@ const DashboardSideBar = () => {
     <SheetHeader>
       <SheetTitle>Are you absolutely sure?</SheetTitle>
       <SheetDescription>This action cannot be undone.</SheetDescription>
+       <nav className="flex flex-col gap-2">
+              <Button variant="ghost">Home</Button>
+              <Button variant=  "ghost">About</Button>
+              <Button variant="ghost">Event</Button>
+              <Button variant="default">Login</Button>
+              <Button variant="default">Register</Button>
+            </nav>
     </SheetHeader>
   </SheetContent>
 </Sheet>
