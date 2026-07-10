@@ -22,14 +22,11 @@ const PublicNavbar = () => {
       </div>  
     <div className = "sm:flex hidden flex-1 items-center justify-center gap-4">
        <nav className="flex items-center justify-center gap-2 hover-text-[#1b88a1]">
+       <Link to="/" className={buttonVariants({ variant: "ghost" })}>
+          Home  
+        </Link>
       <NavigationMenu>
   <NavigationMenuList>
-    <NavigationMenuItem>
-      <NavigationMenuTrigger>Product</NavigationMenuTrigger>
-      <NavigationMenuContent>
-        <NavigationMenuLink>Link</NavigationMenuLink>
-      </NavigationMenuContent>
-      </NavigationMenuItem>
     <NavigationMenuItem>
       <NavigationMenuTrigger>UseCase</NavigationMenuTrigger>
       <NavigationMenuContent>
