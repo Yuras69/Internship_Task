@@ -43,15 +43,14 @@ const PublicNavbar = () => {
       </NavigationMenuContent>
     </NavigationMenuItem>
     <NavigationMenuItem>
-      <NavigationMenuTrigger>Resources</NavigationMenuTrigger>
-      <NavigationMenuContent>
-        <NavigationMenuLink>Link</NavigationMenuLink>
-      </NavigationMenuContent>
     </NavigationMenuItem>
   </NavigationMenuList>
 </NavigationMenu>
         <Link to="/users" className={buttonVariants({ variant: "ghost" })}>
           Users
+        </Link>
+        <Link to="/product" className={buttonVariants({ variant: "ghost" })}>
+          Product
         </Link>
       </nav>
       </div>

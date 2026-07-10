@@ -1,7 +1,6 @@
 
 import React from 'react'
-import { Link } from 'react-router-dom'
-
+import { Link, useParams } from 'react-router-dom'
 
 const Users = () => {
   const userData = [
@@ -11,14 +10,18 @@ const Users = () => {
     { id: 4, name: "Alice Johnson", email: "a@example.com" },
     { id: 5, name: "Charlie Brown", email: "c@example.com" },
   ]
+ 
 
+  
   return (
     <>
     <div>
       <h1>Users List Page</h1>
       {userData.map((item) => (
-        <div>
-          <Link to={`/users/${item.id}`}>{item.name}</Link>
+        <div key={item.id}>
+          <h3>{item.name}</h3>
+          <p>{item.email}</p>
+          <Link to={`/users/${item.id}`}>{item.id}</Link>
         </div>
       ))}
     </div>
