@@ -10,6 +10,7 @@ import Register from './Pages/Register'
 import Users from './Pages/Users'
 import UserDetails from './Pages/UserDetails'
 import Product from './Pages/Product'
+import ProductDetails from './Pages/ProductDetails'
 
 export function App() {
 
@@ -32,7 +33,16 @@ const router = createBrowserRouter([
     },
     {
       path: '/product',
-      Component: Product,
+      children : [
+        {
+          index: true,
+          Component: Product,
+        },
+        {
+          path: ':id',
+          Component: ProductDetails,
+        },
+      ]
     },
     {
       path: '/users',
