@@ -27,7 +27,7 @@ const Home = () => {
 
             </div>
             <div>
-              <Button variant="default" className="mt-4 bg-[#0f407b]">
+              <Button variant="default" className="mt-4 bg-[#0f407b] shadow-md transition hover:bg-[#123b6a]">
                 Get Started
               </Button>
             </div>
